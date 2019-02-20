@@ -1,0 +1,24 @@
+@import "components/font-awesome/fontawesome";
+@import "components/owlcarousel/owl.carousel";
+@import "components/owlcarousel/owl.theme.default";
+
+@import "core/vars";
+@import "core/general";
+
+@import "blocks/top_navbar";
+@import "blocks/fixed_navbar";
+@import "blocks/main_banner";
+@import "blocks/product_list";
+@import "blocks/catalog_block";
+@import "blocks/information_block";
+@import "blocks/reviews_block";
+@import "blocks/seo_block";
+@import "blocks/news";
+@import "blocks/contacts";
+@import "blocks/footer";
+@import "blocks/login_modal";
+
+@import "pages/home";
+@import "pages/shopping-cart";
+
+@import "core/media";

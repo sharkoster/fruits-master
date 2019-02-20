@@ -1,0 +1,289 @@
+/* Стили страницы корзины заказа товаров */
+
+.shopping-cart .container {
+  padding: 20px 60px;
+}
+
+/* Красивый эфект при наведении на кнопку */
+
+button {
+  transition: all 0.3s ease-in-out;
+}
+
+/*  Блок хлебные крошки */
+
+.breadcrumb {
+  margin-bottom: 20px;
+  li {
+    list-style-type: none;
+    display: inline-block;
+    color: #676b73;
+    font-size: 12px;
+  }
+  > li {
+    > a {
+      text-decoration: none;
+      color: #676b73;
+      font-size: 16px;
+      font-weight: bold;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    + li:before {
+      padding: 0 5px;
+      content: "/";
+      font-size: 12px;
+      color: #5b5b5b;
+    }
+    &:first-child::before {
+      content: '';
+      display: inline-block;
+      margin-right: 10px;
+      width: 13px;
+      height: 13px;
+      background: url(../../images/homepage.png) top left no-repeat;
+    }
+  }
+}
+
+/*  Список товаров в корзине */
+
+.cart-list {
+  margin-left: 0;
+  padding-left: 0;
+  padding-right: 70px;
+  li {
+    list-style-type: none;
+    height: auto;
+    display: block;
+    margin: 30px 0;
+  }
+}
+
+.del-tovar {
+  float: left;
+  border: 0 none;
+  background-color: transparent;
+  width: 70px;
+  height: 245px;
+  font-family: "Courier New";
+  font-size: 45px;
+  color: gray;
+  &:hover {
+    background-color: #f8fafb;
+  }
+}
+
+/* Карточка товара в корзине */
+
+.in-cart {
+  height: 245px;
+  width: auto;
+  overflow: hidden;
+  box-shadow: 1px 3px 19px -5px #000000;
+}
+
+.product_in-cart_pict {
+  float: left;
+  background-color: white;
+  width: 280px;
+  height: inherit;
+  position: relative;
+}
+
+.product_in-cart_info {
+  background-color: #f8fafb;
+  width: auto;
+  overflow: hidden;
+  /*width: calc(100% - 400px); вместо предудщих правил если браузеры новые */
+  margin: auto;
+  padding: 0 30px;
+  height: inherit;
+}
+
+.rate-price {
+  float: right;
+  background-color: #f8fafb;
+  width: 240px;
+  height: inherit;
+}
+
+/* В информации про товары */
+
+.product_in-cart_info h3 {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 30px 0;
+  &::after {
+    content: "";
+    display: block;
+    position: relative;
+    height: 3px;
+    width: 70px;
+    background-color: darkgray;
+    top: 7px;
+  }
+}
+
+.inrate {
+  margin: 10px 0;
+  padding-left: 0;
+  width: 335px;
+  li {
+    display: table-cell;
+    list-style-type: none;
+    width: 110px;
+    font-size: 14px;
+    &:nth-child(2) {
+      text-align: center;
+    }
+    &:last-child {
+      text-align: right;
+      > a {
+        color: #717171;
+        &::before {
+          content: '';
+          display: inline-block;
+          margin-right: 0;
+          width: 15px;
+          height: 10px;
+          background: url(../../images/icon-arrow.png) top left no-repeat;
+          position: relative;
+          top: 4px;
+        }
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.product_in-cart_info {
+  p {
+    font-size: 16px;
+    margin: 20px 0;
+  }
+  > a {
+    color: #6d6d6d;
+    font-size: 20px;
+    margin-top: 20px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* - Рейтинг и цена - */
+
+.rate_like-dislike {
+  width: auto;
+  height: auto;
+  text-align: center;
+  background: white;
+  border: 1px solid darkgray;
+  border-radius: 12px;
+  padding: 8px 0;
+  margin: 34% 60px 10px;
+  button {
+    padding: 5px 14px;
+    background-color: transparent;
+    border: 0;
+    font-size: 14px;
+    &:hover {
+      background-color: #f2f2f2;
+    }
+    &:first-child {
+      border-right: 1px;
+      border-right-style: solid;
+      border-right-color: darkgray;
+    }
+    &:last-child {
+      border-left: 1px;
+      border-left-style: solid;
+      border-left-color: darkgray;
+    }
+  }
+  span {
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
+    min-width: 30px;
+  }
+}
+
+.rate-price p {
+  font-size: 30px;
+  margin-left: 64px;
+}
+
+/* Фото товара со звездочкой */
+
+.product_in-cart_pict .tovar-pict {
+  width: 150px;
+  height: 200px;
+  display: block;
+  margin: 25px auto;
+}
+
+.in-favorites {
+  border: 0 none;
+  color: #ff6d6d;
+  background-color: transparent;
+  font-size: 30px;
+  &:hover {
+    color: darkred;
+  }
+}
+
+.product_in-cart_pict .in-favorites {
+  position: absolute;
+  left: 10px;
+  top: 20px;
+}
+
+/* ---------  Сумма покупки   ------------ */
+
+.sum-price {
+  margin: 70px 70px 0 70px;
+  div:last-child {
+    margin-right: 350px;
+    font-size: 24px;
+    position: relative;
+    span {
+      display: inline-block;
+      position: absolute;
+      top: 15px;
+      left: 65px;
+    }
+    p {
+      font-size: 24px;
+      display: inline-block;
+      position: absolute;
+      top: 10px;
+      left: 280px;
+    }
+    b {
+      font-size: 32px;
+      margin-right: 7px;
+    }
+  }
+}
+
+.shopping-cart .product_list_container-content__items-container__content-addtocart {
+  width: 350px;
+  float: right;
+  a {
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: green;
+      border-radius: 8px;
+    }
+  }
+}
+
+.priceimgs {
+  width: 46px;
+  height: 65px;
+}
